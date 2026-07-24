@@ -48,6 +48,48 @@ python image_processing/week01_image_io.py
 
 详细笔记见 [notes/week01.md](notes/week01.md)。
 
+## 第 2 周：图像处理进阶
+
+### 运行方式
+
+```bash
+# 1. 激活环境
+conda activate cv
+
+# 2. 进入项目目录
+cd cv-dl-llm-summer-study
+
+# 3. 运行图像处理进阶练习
+python image_processing/week02_cv_demo.py
+```
+
+### 内容概览
+
+| 模块 | 内容 |
+|------|------|
+| 灰度变换 | 反转、对数变换、伽马校正（γ=0.5 / 2.0） |
+| 直方图均衡化 | 全局均衡化 (HE) + CLAHE 自适应均衡化 |
+| 平滑滤波 | 均值、高斯、中值、双边滤波对比 |
+| 边缘检测 | Sobel、Laplacian、Canny 算子对比 |
+| 形态学操作 | 腐蚀/膨胀/开闭运算/梯度/顶帽/黑帽 |
+| 轮廓提取 | 轮廓检测、外接矩形、凸包、填充 |
+| 综合流水线 | 去噪→Canny→形态学→轮廓 完整流程 |
+| 去噪对比 | 椒盐噪声 + 不同滤波器去噪效果对比 |
+
+### 输出说明
+
+运行后在 `results/` 目录下生成：
+- `*_01_grayscale_transforms.png` — 灰度变换对比
+- `*_02_histogram_equalization.png` — 直方图均衡化 + 直方图
+- `*_03_smoothing.png` — 各种平滑滤波对比
+- `*_04_edge_detection.png` — 各种边缘检测对比
+- `*_05_morphology.png` — 形态学操作效果
+- `*_06_kernel_comparison.png` — 不同结构元素对比
+- `*_07_contours.png` — 轮廓提取效果
+- `*_08_pipeline.png` — 综合流水线
+- `*_09_denoising.png` — 椒盐噪声去噪对比
+
+详细笔记见 [notes/week02.md](notes/week02.md)。
 
 ## 环境配置
 
